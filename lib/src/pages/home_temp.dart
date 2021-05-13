@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/src/pages/alert_page.dart';
 import 'package:flutter_application_1/src/providers/menu_provider.dart';
 import 'package:flutter_application_1/src/utils/icono_string_util.dart';
+
 //import 'home_temp2.dart';
 
 class HomePage extends StatelessWidget {
@@ -57,10 +59,11 @@ class HomePage extends StatelessWidget {
           color: Colors.lightBlueAccent,
         ),
         onTap: (){
-          showDialog(
+          Navigator.pushNamed(context, otp['ruta']);
+          /*showDialog(
             context: context,
             builder: (BuildContext context) => _dialog(context, otp['texto']),
-          );
+          );*/
         },
       );
       opciones..add(widgetTemp)..add(Divider());
