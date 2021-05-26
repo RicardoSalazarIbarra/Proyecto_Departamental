@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/src/pages/alert_page.dart';
+//import 'package:flutter_application_1/src/pages/alert_page.dart';
 import 'package:flutter_application_1/src/providers/menu_provider.dart';
 import 'package:flutter_application_1/src/utils/icono_string_util.dart';
 
@@ -71,7 +71,7 @@ class HomePage extends StatelessWidget {
     return opciones;
   }
 
-  Widget _dialog(BuildContext context, String otp){
+  /*Widget _dialog(BuildContext context, String otp){
     return new AlertDialog(
       title: const Text('Alerta De Dialogo'),
       content: Column(
@@ -89,5 +89,5 @@ class HomePage extends StatelessWidget {
         ),
       ],
     );
-  }
+  }*/
 }
