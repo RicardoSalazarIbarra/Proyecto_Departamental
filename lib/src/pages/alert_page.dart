@@ -4,7 +4,7 @@ import 'package:flutter_application_1/src/pages/save_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class AlertPage extends StatelessWidget {
-  AlertPage({Key key}) : super(key: key);
+  const AlertPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

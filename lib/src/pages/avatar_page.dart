@@ -1,62 +1,78 @@
-//import 'dart:html';
 import 'package:flutter/material.dart';
 
 class AvatarPage extends StatelessWidget {
-  const AvatarPage ({Key key}): super (key: key);
+  const AvatarPage({Key key}) : super(key: key);
+
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('AvatarPage'),
-      ),
-      body: ListAvatar(),
-    );
-  }
-}
-
-class User {
-  String fullname,nameapodo, photoUlr;
-  User(this.fullname,this.nameapodo,this.photoUlr);
-}
-
-class ListAvatar extends StatefulWidget {
-  @override
-  _ListAvatarState createState() => _ListAvatarState();
-}
-
-class _ListAvatarState extends State<ListAvatar> {
-  List<User> users;
-
-  @override
-  void initState() {
-    users = [
-      User('Ricardo Salazar','Richy','Avatar1.png'),
-      User('Omar Garrido','Omi','Avatar2.png'),
-      User('Felipe Morelos','Feli','Avatar3.png'),
-    ];
-    super.initState();
-  }
-  
-
-  @override
-  Widget build(BuildContext context){
-    return ListView.builder(
-      itemBuilder: (context, index){
-        return ListTile(
-          title: Text(users[index].fullname),
-          subtitle: Text(users[index].nameapodo),
-          leading: CircleAvatar(
-            backgroundColor: Colors.black,
-            radius: 50,
-            child: CircleAvatar(
-              backgroundColor: Colors.cyan [100],
-              backgroundImage: AssetImage(users[index].photoUlr),
-              radius: 20,
-            ),
+          appBar: AppBar(
+            title: Text('AvatarPage'),
           ),
-        );
-      },
-      itemCount: users.length,
+          body: (ListView(
+            children: [
+              Container(
+                child: ListTile(
+                  title: Text('Avatar Circular'),
+                  leading: Icon(Icons.account_circle,
+                  color: Colors.lightBlueAccent,
+                  ),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right_sharp,
+                    color: Colors.blue,
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('avatar/circular');
+                  },
+                ),
+              ),
+              Container(
+                child: ListTile(
+                  title: Text('Avatar circular con borde'),
+                  leading: Icon(Icons.account_circle,
+                  color: Colors.lightBlueAccent,
+                  ),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right_sharp,
+                    color: Colors.blue,
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('avatar/circularBorde');
+                  },
+                ),
+              ),
+              Container(
+                child: ListTile(
+                  title: Text('Avatar rectangulo'),
+                  leading: Icon(Icons.account_circle,
+                  color: Colors.lightBlueAccent,
+                  ),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right_sharp,
+                    color: Colors.blue,
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('avatar/rectangulo');
+                  },
+                ),
+              ),
+              Container(
+                child: ListTile(
+                  title: Text('Avatar rectangular con borde'),
+                  leading: Icon(Icons.account_circle,
+                  color: Colors.lightBlueAccent,
+                  ),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right_sharp,
+                    color: Colors.blue,
+                  ),
+                  onTap: () {
+                    Navigator.of(context).pushNamed('avatar/rectanguloBorde');
+                  },
+                ),
+              ),
+            ],
+          )),
     );
   }
 }
