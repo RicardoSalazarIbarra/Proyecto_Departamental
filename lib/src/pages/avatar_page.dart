@@ -7,7 +7,7 @@ class AvatarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
           appBar: AppBar(
-            title: Text('AvatarPage'),
+            title: Text('Types Of Avatars'),
           ),
           body: (ListView(
             children: [
